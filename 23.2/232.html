@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //         Front-end development
+      // JavaScript – super powers
+      // The following exercise contains the following subjects:
+      // ● context
+      // Instructions
+      // Your Task: Edit the storm object. Invoke the printSuperPower
+      // function using the storm object as the context of the function.
+      // So your output should be: my superpower is flying.
+      // Well, Storm also controls the weather, so, whatever you
+      // choose!
+      // You cannot change the printSuperPower function
+      const storm = {
+        superPower: "flying",
+        printSuperPower: function () {
+          console.log("my superpower is " + this.superPower);
+        },
+      };
+
+      storm.printSuperPower();
+    </script>
+  </body>
+</html>

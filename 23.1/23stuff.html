@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //         Front-end development
+      // JavaScript – fundamentals of this
+      // The following exercise contains the following subjects:
+      // ● context
+      // Instructions
+      // Answer the following questions:
+      // Question 1:
+      // In your own words what will this point to and why?
+      // (Note this is the global scope)
+      //   console.log(this);
+      //this refers to the window object
+
+      // Question 2:
+      // a. In your own words what will this point to and why?
+      //It will point to the global object because the arrow function doesn't suppot this
+      // b. How can you fix this code?
+      // Change the function unto a regular one.
+      //   const myObj = {
+      //     name: "Timmy",
+      //     greet: function() {
+      //       console.log(`Hello ${this.name}`);
+      //     },
+      //   };
+      //   console.log(myObj);
+      // myObj.greet();
+      // Question 3:
+      // In your own words what will this point to and why?
+      // In the code provided, myFuncDec is declared as an anonymous function. The behavior of the this keyword in JavaScript functions depends on how the function is called.
+      //If this function is called in the global context or without any specific context, this will typically refer to the global object, which is window in a web browser environment or global in Node.js.
+      const myFuncDec = function () {
+        console.log(this);
+      };
+      // Question 4:
+      // In your own words what will this point to and why?
+      // this function will refer to the global window object becuase arrow function doesn't support this
+      const myFuncArrow = () => {
+        console.log(this);
+      };
+      myFuncArrow();
+      // Question 5:
+      // a. In your own words, what will this point to and why?
+      // Due to it being an arrow function it will point to the global object instead of the
+      //the dom element the was selected using the selector.
+      // b. How can you fix this code?
+      // to fix it we need to change the arrow function to a regular callback function
+      // document.querySelector(".element").addEventListener(() => {
+      // console.log(this);
+      // }); -->
+    </script>
+  </body>
+</html>
